@@ -3,6 +3,14 @@ Target Device: Tecno Pova 5 Pro (LH8n)
 Base ROM: HiOS 14 Ver 824 
 By: Kanagawa Yamada
 
+Plan:
+- Take Pova 7 Bootanim [DONE]
+- Wallpaper & lockscreen [DONE]
+- Sounds [DONE]
+- Add Anya Thermal (if I can)
+- Partial Yamada Patch
+- Modify Theme
+
 Key:
 [REMOVE] = x
 [Add] = +
