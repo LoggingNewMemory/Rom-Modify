@@ -1,0 +1,66 @@
+HiOSPro Source
+By: Kanagawa Yamada
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+/product/media
+bootanimation.zip # (Change to Pova 7 Bootanim (I like it frfr))
+
+/product/overlay
+treble-overlay-xos-bg.apk + (Change Setting Header Image)
+
+/system/system/etc/sysconfig/
+(Google Photos Unlimited Backup) 
+pixel_2017_exclusive.xml +
+pixel_2018_exclusive.xml +
+pixel_2019_exclusive.xml +
+
+/product/etc/sysconfig/
+(Google Photos Unlimited Backup)
+pixel_2016_exclusive.xml +
+pixel_2017_exclusive.xml +
+pixel_2018_exclusive.xml +
+pixel_2019_exclusive.xml +
+pixel_experience_2017.xml +
+pixel_experience_2018.xml +
+pixel_experience_2019.xml +
+pixel_experience_2019_midyear.xml +
+pixel_experience_2020.xml +
+pixel_experience_2020_midyear.xml +
+pixel_experience_2021.xml +
+pixel_experience_2021_midyear.xml +
+pixel_experience_2022.xml +
+pixel_experience_2022_midyear.xml +
+pixelify_experience.xml +
+
+/product/app
+Via + (Via Browser)
+Accord + (Accord Legacy)
+TSPOT x
+VishaPlayer x
+XShare x
+YouTube x
+YTMusic x
+Chrome x
+ChromeAssistant x
+CalendarGoogle
+HolaBrowser x
+
+/product/priv-app
+Carlcare x
+PalmStore x
+
+/system/system/app/ 
+[No Changes]
+
+/system/system/priv-app/
+[No Changes]
+
+/system_ext/app
+Ella x
+
+/system_ext/priv-app
+[No Changes]
