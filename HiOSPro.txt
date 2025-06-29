@@ -1,4 +1,6 @@
-HiOSPro Source
+HiOSPro V2 Source
+Target Device: Tecno Pova 5 Pro (LH8n)
+Base ROM: HiOS 14 Ver 824 
 By: Kanagawa Yamada
 
 Key:
