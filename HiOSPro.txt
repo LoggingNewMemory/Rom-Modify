@@ -60,8 +60,6 @@ pixel_experience_2022_midyear.xml +
 pixelify_experience.xml +
 
 /product/app
-Via + (Via Browser)
-Accord + (Accord Legacy)
 TSPOT x
 VishaPlayer x
 XShare x
@@ -75,6 +73,8 @@ HolaBrowser x
 /product/priv-app
 Carlcare x
 PalmStore x
+Via + (Via Browser)
+Accord + (Accord Legacy)
 
 /system/system/app/ 
 [No Changes]
