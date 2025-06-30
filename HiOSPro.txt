@@ -9,6 +9,7 @@ Key:
 [Modify] = #
 
 Plan:
+- Base taken from HiOS 14 v824 [DONE]
 - Take Pova 7 Bootanim [DONE]
 - Wallpaper & lockscreen [DONE]
 - Sounds [DONE]
