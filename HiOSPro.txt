@@ -3,21 +3,33 @@ Target Device: Tecno Pova 5 Pro (LH8n)
 Base ROM: HiOS 14 Ver 824 
 By: Kanagawa Yamada
 
-Plan:
-- Take Pova 7 Bootanim [DONE]
-- Wallpaper & lockscreen [DONE]
-- Sounds [DONE]
-- Add Anya Thermal (if I can)
-- Partial Yamada Patch
-- Modify Theme
-
 Key:
 [REMOVE] = x
 [Add] = +
 [Modify] = #
 
+Plan:
+- Take Pova 7 Bootanim [DONE]
+- Wallpaper & lockscreen [DONE]
+- Sounds [DONE]
+- Add Anya Thermal (if I can)
+- Partial Yamada Patch [DONE]
+- Modify & Add Theme
+- Device is La+ Darkness [DONE | Need Testing]
+
+/product/theme/wallpaper
+Wallpaper Pova 7 & Pova 6 #
+Free Fire Wallpaper x
+Pova 5 Wallpaper x
+Exclusive HiOSPro 2.0 Wallpaper +
+Exclusive La+ Darkness Wallpaper +
+
+/product/media/audio
+Replace UI Sounds with Pova 7 # Using overwrite, not sure will compatible
+
 /product/media
 bootanimation.zip # (Change to Pova 7 Bootanim (I like it frfr))
+shutdownanim.zip # (Change to Pova 7 Shutdown anim)
 
 /product/overlay
 treble-overlay-xos-bg.apk + (Change Setting Header Image)
