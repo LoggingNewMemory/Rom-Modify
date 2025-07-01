@@ -25,6 +25,9 @@ Pova 5 Wallpaper x
 Exclusive HiOSPro 2.0 Wallpaper +
 Exclusive La+ Darkness Wallpaper +
 
+/product/theme/charge
+Replace Pova 5 Pro Charging Animation to Pova 7 Pro
+
 /product/media/audio
 Replace UI Sounds with Pova 7 # Using overwrite, not sure will compatible
 
