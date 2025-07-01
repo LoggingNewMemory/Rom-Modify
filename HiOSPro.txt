@@ -16,7 +16,7 @@ Plan:
 - Add Anya Thermal (if I can)
 - Partial Yamada Patch [DONE]
 - Modify & Add Theme
-- Device is La+ Darkness 
+- La+ System Setting Banner [DONE] 
 
 /product/theme/wallpaper
 Wallpaper Pova 7 & Pova 6 #
