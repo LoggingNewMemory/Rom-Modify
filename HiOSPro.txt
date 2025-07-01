@@ -13,9 +13,8 @@ Plan:
 - Take Pova 7 Bootanim [DONE]
 - Wallpaper & lockscreen [DONE]
 - Sounds [DONE]
-- Add Anya Thermal (if I can)
 - Partial Yamada Patch [DONE]
-- Modify & Add Theme
+- Modify & Add Theme [DONE]
 - La+ System Setting Banner [DONE] 
 
 /product/etc/build.prop
