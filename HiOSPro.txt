@@ -18,6 +18,10 @@ Plan:
 - Modify & Add Theme
 - La+ System Setting Banner [DONE] 
 
+/product/etc/build.prop
+- Yamada Patch 1.0
+- ro.os_circle_to_search=1 (Give CTS?)
+
 /product/theme/wallpaper
 Wallpaper Pova 7 & Pova 6 #
 Free Fire Wallpaper x
