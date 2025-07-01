@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Document>
+<theme-info>
+    <id>-99</id>
+    <name>HiOSPro</name>
+    <filename>PartyTheme_FreeFire.apk</filename>
+    <filepath>product/theme/PartyTheme_FreeFire/PartyTheme_FreeFire.apk</filepath>
+</theme-info>
+<theme-info>
+    <id>-1</id>
+    <name>La+ Darkness</name>
+    <filename>PartyTheme.apk</filename>
+    <filepath>product/theme/PartyTheme/PartyTheme.apk</filepath>
+</theme-info>
+</Document>
