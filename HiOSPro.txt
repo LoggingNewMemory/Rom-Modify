@@ -70,11 +70,29 @@ ChromeAssistant x
 CalendarGoogle
 HolaBrowser x
 
+/product/operator/app
+AHAGames x
+Boomplay x
+Drive x
+EtalaseApps x
+FacebookStub x
+Shopee x
+ShopeeID x
+ShopeeTH x
+Snapchat x
+TikTok x
+TikTokLite x
+TikTokzhiliao x
+Videos x
+Welife x
+WPSOffice x
+
 /product/priv-app
 Carlcare x
 PalmStore x
 Via + (Via Browser)
 Accord + (Accord Legacy)
+VelvetCtS + (Attempt to Bring Circle to Search)
 
 /system/system/app/ 
 [No Changes]
