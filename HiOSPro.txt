@@ -19,6 +19,9 @@ Plan:
 
 /product/etc/build.prop
 - Yamada Patch 1.0
+- ro.tran_low_battery_60hz_refresh_rate.support=0
+- ro.product.tran.version.release=HiOSPro-2.0-KanagawaYamada-BV824
+- ro.build.display.id=HiOSPro-2.0-KanagawaYamada-BV824
 
 /product/theme/wallpaper
 Wallpaper Pova 7 & Pova 6 #
