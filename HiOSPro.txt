@@ -119,6 +119,7 @@ AIVoiceSettings x
 MasterOfLanguage x
 TranssionFMRadio x
 LetsSwitch x
+FM_FunBase x
 
 /system_ext/priv-app
 [No Changes]
