@@ -19,7 +19,6 @@ Plan:
 
 /product/etc/build.prop
 - Yamada Patch 1.0
-- ro.os_circle_to_search=1 (Give CTS?)
 
 /product/theme/wallpaper
 Wallpaper Pova 7 & Pova 6 #
@@ -32,14 +31,14 @@ Exclusive La+ Darkness Wallpaper +
 Replace Pova 5 Pro Charging Animation to Pova 7 Pro
 
 /product/media/audio
-Replace UI Sounds with Pova 7 # Using overwrite, not sure will compatible
+Replace UI Sounds with Pova 7 # 
 
 /product/media
 bootanimation.zip # (Change to Pova 7 Bootanim (I like it frfr))
 shutdownanim.zip # (Change to Pova 7 Shutdown anim)
 
 /product/overlay
-treble-overlay-xos-bg.apk + (Change Setting Header Image)
+hios-trans-overlay.apk + (Change Setting Header Image)
 
 /system/system/etc/sysconfig/
 (Google Photos Unlimited Backup) 
@@ -100,11 +99,7 @@ PalmStore x
 FilesGoogle x
 Via + (Via Browser)
 Accord + (Accord Legacy)
-MiCTS + (Trigger CTS)
 Coffee + (Similar With Caffeine Tile)
-Velvet # (Replaced With VelvetCtS (Hope to get CTS))
-HotwordEnrollmentOKGoogleRISCV # (Replaced From Pova 7)
-HotwordEnrollmentXGoogleRISCV # (Replaced From Pova 7)
 
 /system/system/app/ 
 [No Changes]
