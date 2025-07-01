@@ -70,7 +70,7 @@ YouTube x
 YTMusic x
 Chrome x
 ChromeAssistant x
-CalendarGoogle
+CalendarGoogle x
 HolaBrowser x
 
 /product/operator/app
@@ -93,9 +93,12 @@ WPSOffice x
 /product/priv-app
 Carlcare x
 PalmStore x
+FilesGoogle x
 Via + (Via Browser)
 Accord + (Accord Legacy)
-VelvetCtS + (Attempt to Bring Circle to Search)
+Velvet # (Replaced With VelvetCtS (Hope to get CTS))
+HotwordEnrollmentOKGoogleRISCV # (Replaced From Pova 7)
+HotwordEnrollmentXGoogleRISCV # (Replaced From Pova 7)
 
 /system/system/app/ 
 [No Changes]
