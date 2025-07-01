@@ -75,6 +75,7 @@ Chrome x
 ChromeAssistant x
 CalendarGoogle x
 HolaBrowser x
+Meet x
 
 /product/operator/app
 AHAGames x
