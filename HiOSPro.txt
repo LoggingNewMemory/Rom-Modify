@@ -16,7 +16,7 @@ Plan:
 - Add Anya Thermal (if I can)
 - Partial Yamada Patch [DONE]
 - Modify & Add Theme
-- Device is La+ Darkness [DONE | Need Testing]
+- Device is La+ Darkness 
 
 /product/theme/wallpaper
 Wallpaper Pova 7 & Pova 6 #
@@ -109,6 +109,8 @@ MagazineService x
 AIVoiceAssistant_v3.9 x
 AIVoiceSettings x
 MasterOfLanguage x
+TranssionFMRadio x
+LetsSwitch x
 
 /system_ext/priv-app
 [No Changes]
