@@ -105,6 +105,10 @@ VelvetCtS + (Attempt to Bring Circle to Search)
 
 /system_ext/app
 Ella x
+MagazineService x
+AIVoiceAssistant_v3.9 x
+AIVoiceSettings x
+MasterOfLanguage x
 
 /system_ext/priv-app
 [No Changes]
