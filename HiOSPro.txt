@@ -100,7 +100,8 @@ PalmStore x
 FilesGoogle x
 Via + (Via Browser)
 Accord + (Accord Legacy)
-MiCTS (Trigger CTS)
+MiCTS + (Trigger CTS)
+Coffee + (Screen Can't turn off) 
 Velvet # (Replaced With VelvetCtS (Hope to get CTS))
 HotwordEnrollmentOKGoogleRISCV # (Replaced From Pova 7)
 HotwordEnrollmentXGoogleRISCV # (Replaced From Pova 7)
