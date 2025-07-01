@@ -101,6 +101,7 @@ FilesGoogle x
 Via + (Via Browser)
 Accord + (Accord Legacy)
 MiCTS + (Trigger CTS)
+Coffee + (Similar With Caffeine Tile)
 Velvet # (Replaced With VelvetCtS (Hope to get CTS))
 HotwordEnrollmentOKGoogleRISCV # (Replaced From Pova 7)
 HotwordEnrollmentXGoogleRISCV # (Replaced From Pova 7)
