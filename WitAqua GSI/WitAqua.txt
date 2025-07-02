@@ -8,3 +8,15 @@ Key:
 [REMOVE] = x
 [Add] = +
 [Modify] = #
+
+/system/system_ext/priv-app/
+AudioFX x
+
+/system/product/app/
+Camera2 x
+Jelly # Replaced With Via Browser
+LatinIME # Replaced With LatinIMEGooglePrebuilt
+Twelve # Replaced With Accord Legacy
+
+/system/product/etc/build.prop
+ro.os_circle_to_search=1
