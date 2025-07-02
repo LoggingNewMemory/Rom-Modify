@@ -2,3 +2,8 @@
 
 ## You may look at my notes
 ### Thank You
+
+Support Me:
+HERE (https://saweria.co/kanagawayamada) (ID / PH) <br />
+HERE (https://sociabuzz.com/kanagawa_yamada/tribe) (Global) <br />
+HERE (https://t.me/KLAGen2/86) (QRIS) <br />
