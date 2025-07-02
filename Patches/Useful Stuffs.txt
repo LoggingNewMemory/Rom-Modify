@@ -1,1 +1,17 @@
 Download LOS Apps: https://www.sebaubuntu.dev/lineageapps.html
+Download MIO-Kitchen: https://github.com/ColdWindScholar/MIO-KITCHEN-SOURCE
+
+How to Add apps:
+- Port ROM (Assume if the system is EROFS)
+- Turn on SELinux Context Patch in MIO-Kitchen Setting
+- Make a new folder in /product/priv-app/[App Name]
+- Put the .apk inside the new app folder
+
+- GSI (Assume if the system is EXT)
+- Disclaimer: This method is more like replacing app, since there's no way to do add a new app
+without turning on SELinux Context Patch
+- Search for a similiar app folder (Ex: Twelve (LOS Music App))
+- Rename & Replace the Twelve.apk to Accord.apk (Make sure the name is still same)
+- Delete all oat, or data or anything else. The only thing remains is only the .apk file
+
+Note: Not all APK can be added
