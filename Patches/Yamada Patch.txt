@@ -1,0 +1,178 @@
+##########################################
+#              YAMADA PATCH              #
+##########################################
+# This props belongs to Kanagawa Yamada  #
+#    And The Contributed Developers      #
+# Please Credit or You Get a Bone Cancer #
+##########################################
+
+#perf+
+debug.sf.enable_gl_backpressure=1
+debug.sf.disable_backpressure=0
+debug.sf.disable_client_composition_cache=1
+ro.surface_flinger.enable_frame_rate_override=false
+
+# Yamada
+# Fix Brightness
+ro.vendor.transsion.backlight_hal.optimization=1
+persist.sys.phh.touch_hint=rotate
+debug.renderengine.backend=skiaglthreaded
+
+# From Zeta
+
+# ScrollConfig
+view.touch_slop=3
+touch.deviceType=touchScreen
+ro.min_pointer_dur=0.00000001
+ro.product.multi_touch_enabled=true
+persist.sys.scrollingcache=3
+
+# SensitivityConfig
+device.internal=1
+debug.performance.tuning=1
+view.scroll_friction=0.00001
+touch.pressure.scale=0.00001
+touch.size.calibration=100
+touch.pressure.calibration=0
+touch.size.scale=1.0
+touch.size.bias=0
+touch.size.isSummed=1
+touch.orientation.calibration=0
+touch.distance.calibration=0
+touch.distance.scale=2
+touch.coverage.calibration=0
+touch.gestureMode=geometric
+touch.orientationAware=true
+touch.filter.level=0
+touch.pressure.source=touchScreen
+touch.touchSize.calibration=geometric
+touch.toolSize.calibration=geometric
+touch.toolSize.areaScale=1.0
+touch.toolSize.areaBias=0
+touch.toolSize.linearScale=1.0
+touch.toolSize.linearBias=0
+touch.toolSize.isSummed=1
+touchscreen.rescale=3
+touch.input_boost_enabled=1
+touch.boost=1
+
+# MovementConfig
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.05
+persist.vendor.qti.inputopts.tapduration=0.01
+persist.vendor.qti.inputopts.holdthreshold=0.005
+
+# Input
+DragMinSwitchSpeed=999999.0px/s
+SwipeMaxWidthRatio=1
+MovementSpeedRatio=1
+ZoomSpeedRatio=1
+SwipeTransitionAngleCosine=2.6
+mot.proximity.distance=1
+mot.proximity.delay=100
+PointerVelocityControlParameters=1
+lowThreshold=0
+highThreshold=0
+VirtualKeyQuietTime=0
+KeyRepeatDelay=0
+KeyRepeatTimeout=0
+persist.input.ignoremultitouch=0
+persist.input.max_events_per_sec=300
+
+# Fix low volume
+persist.audio.voip.vol=100
+ro.config.media_vol_steps=30
+ro.config.vc_call_vol_steps=30
+persist.audio.volume_steps=30
+persist.audio.max_volume=100
+
+# ANGLE For Android 15
+debug.graphics.angle.developeroption.enable=true
+
+#######################################
+# EnCorinVest prop
+#######################################
+PERF_RES_NET_BT_AUDIO_LOW_LATENCY=1
+PERF_RES_NET_WIFI_LOW_LATENCY=1
+PERF_RES_NET_MD_WEAK_SIG_OPT=1
+PERF_RES_NET_NETD_BOOST_UID=1
+PERF_RES_NET_MD_HSR_MODE=1
+PERF_RES_THERMAL_POLICY=-1
+
+# Disable FPS Drop when low battery
+sys.surfaceflinger.idle_reduce_framerate_enable=no
+
+# Disable Limit 60FPS while Gaming on AOSP 15.0
+debug.graphics.game_default_frame_rate.disable=true
+
+########################################
+# Bastion Battery
+########################################
+# Battery Modifications
+persist.sys.shutdown.mode=hibernate
+persist.radio.add_power_save=1
+wifi.supplicant_scan_interval=300
+ro.ril.disable.power.collapse=1
+ro.config.hw_fast_dormancy=1
+ro.semc.enable.fast_dormancy=true
+ro.config.hw_quickpoweron=true
+ro.mot.eri.losalert.delay=1000
+ro.config.hw_power_saving=true
+pm.sleep_mode=1
+ro.ril.sensor.sleep.control=1
+power_supply.wakeup=enable
+
+# Additional Battery Optimizations
+ro.ril.power.collapse=1
+power.saving.enabled=1
+battery.saver.low_level=30
+power.saving.enable=1
+persist.radio.apm_sim_not_pwdn=1
+ro.ril.enable.amr.wideband=0
+power.saving.low_screen_brightness=1
+ro.config.hw_smart_battery=1
+ro.config.hw_power_profile=low
+
+# Dalvik and Kernel Modifications
+persist.android.strictmode=0
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+ro.config.nocheckin=1
+ro.compcache.default=0
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.verify-bytecode=true
+dalvik.vm.jmiopts=forcecopy
+debug.kill_allocating_task=0
+ro.ext4fs=1
+dalvik.vm.heaputilization=0.25
+dalvik.vm.heaptargetutilization=0.75
+
+# Disable USB Debugging Popup
+persist.adb.notify=0
+
+# Allow to free more RAM
+persist.sys.purgeable_assets=1
+ro.config.low_ram=enable
+
+# Smoother video playback
+video.accelerate.hw=1
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=false
+media.stagefright.enable-http=true
+
+# UI Tweaks
+persist.sys.ui.hw=1
+view.scroll_friction=10
+debug.composition.type=gpu
+debug.performance.tuning=1
+
+# Miscellaneous
+persist.sys.gmaps_hack=1
+debug.sf.ddms=0
+ro.warmboot.capability=1
+logcat.live=disable
+
+# CPU Core Control
+ro.vendor.qti.core_ctl_min_cpu=4
+ro.vendor.qti.core_ctl_max_cpu=4
