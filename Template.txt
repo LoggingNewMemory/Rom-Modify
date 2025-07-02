@@ -1,0 +1,10 @@
+[ROM Name]
+Target Device: 
+Base Vendor: 
+By: Kanagawa Yamada
+GSI Source: 
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
