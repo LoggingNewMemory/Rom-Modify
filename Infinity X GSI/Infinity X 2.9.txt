@@ -10,25 +10,25 @@ Key:
 [Add] = +
 [Modify] = #
 
-/system/system_ext/priv-app/
+/system/system/priv-app/
 MusicFX x
 TrebleApp x
 
-/system/product/app/
-Camera2 x
+/system/system/product/app/
+Camera2 # Replaced with Accord Legacy (ik it's weird but there's already built in aperture)
 Chrome64 # Replaced With Via Browser
 
-/system/product/priv-app/
+/system/system/product/priv-app/
 SettingsIntelligence # Replaced from LOS to fix search on settings (Thanks: Doze-off)
 
-/system/product/etc/build.prop
+/system/system/product/etc/build.prop
 ro.product.product.model=TECNO La+ Darkness
 Yamada Patch 1.0
 
-/system_ext/product/etc/build.prop
+/system/system_ext/product/etc/build.prop
 ro.product.system_ext.model=TECNO La+ Darkness
 
-/system/build.prop
+/system/system/build.prop
 ro.infinity.maintainer=Kanagawa Yamada
 ro.product.marketname=TECNO La+ Darkness
 ro.infinity.soc=Mediatek Dimensity 6080
