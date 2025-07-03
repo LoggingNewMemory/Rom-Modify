@@ -19,7 +19,7 @@ Camera2 x
 Chrome64 # Replaced With Via Browser
 
 /system/product/priv-app/
-Accord +
+SettingsIntelligence # Replaced from LOS to fix search on settings (Thanks: Doze-off)
 
 /system/product/etc/build.prop
 ro.product.product.model=TECNO La+ Darkness
