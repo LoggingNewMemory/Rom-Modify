@@ -1,0 +1,37 @@
+Infinity X 2.9
+Target Device: Tecno Pova 5 Pro (LH8n)
+Base Vendor: HiOS 14 Ver 824 
+By: Kanagawa Yamada
+GSI Source: https://github.com/Doze-off/manifest
+SELinux Context Patch: OFF
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+/system/system_ext/priv-app/
+MusicFX x
+TrebleApp x
+
+/system/product/app/
+Camera2 x
+Chrome64 # Replaced With Via Browser
+
+/system/product/priv-app/
+Accord +
+
+/system/product/etc/build.prop
+ro.product.product.model=TECNO La+ Darkness
+Yamada Patch 1.0
+
+/system_ext/product/etc/build.prop
+ro.product.system_ext.model=TECNO La+ Darkness
+
+/system/build.prop
+ro.infinity.maintainer=Kanagawa Yamada
+ro.product.marketname=TECNO La+ Darkness
+ro.infinity.soc=Mediatek Dimensity 6080
+ro.infinity.battery=5000 mAh
+ro.infinity.display=1080 x 2460, 120 Hz
+ro.infinity.camera=50MP + 16MP + 0.8MP
