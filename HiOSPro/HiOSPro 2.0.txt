@@ -2,6 +2,8 @@ HiOSPro V2 Source
 Target Device: Tecno Pova 5 Pro (LH8n)
 Base ROM: HiOS 14 Ver 824 
 By: Kanagawa Yamada
+SELinux Context Patch: ON
+ROM Status: RELEASED (Unofficial Gaming ROM for LH8n)
 
 Key:
 [REMOVE] = x
@@ -103,6 +105,11 @@ FilesGoogle x
 Via + (Via Browser)
 Accord + (Accord Legacy)
 Coffee + (Similar With Caffeine Tile)
+MiCTS + (Trigger CTS)
+
+Note for CTS: 
+- Hypoteticly Works When Done Updating Google App & Google Assistant
+- To Check: When home button long press, gemini will shows up
 
 /system/system/app/ 
 [No Changes]
