@@ -108,7 +108,7 @@ Coffee + (Similar With Caffeine Tile)
 MiCTS + (Trigger CTS)
 
 Note for CTS: 
-- Hypoteticly Works When Done Updating Google App & Google Assistant
+- Hypothetically Works When Done Updating Google App & Google Assistant
 - To Check: When home button long press, gemini will shows up
 
 /system/system/app/ 
