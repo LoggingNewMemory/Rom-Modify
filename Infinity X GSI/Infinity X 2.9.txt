@@ -4,6 +4,7 @@ Base Vendor: HiOS 14 Ver 824
 By: Kanagawa Yamada
 GSI Source: https://github.com/Doze-off/manifest
 SELinux Context Patch: OFF
+ROM Status: Canceled (Search in Settings Doesn't Work)
 
 Key:
 [REMOVE] = x
@@ -19,7 +20,7 @@ Camera2 # Replaced with Accord Legacy (ik it's weird but there's already built i
 Chrome64 # Replaced With Via Browser
 
 /system/system/product/priv-app/
-SettingsIntelligence # Replaced from LOS to fix search on settings (Thanks: Doze-off)
+SettingsIntelligence # Attempt to fix search on settings (Thanks: Doze-off)
 
 /system/system/product/etc/build.prop
 ro.product.product.model=TECNO La+ Darkness

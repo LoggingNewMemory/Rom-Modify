@@ -4,6 +4,7 @@ Base Vendor:
 By: Kanagawa Yamada
 GSI Source: 
 SELinux Context Patch:
+ROM Status:
 
 Key:
 [REMOVE] = x
