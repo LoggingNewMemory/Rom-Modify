@@ -105,11 +105,6 @@ FilesGoogle x
 Via + (Via Browser)
 Accord + (Accord Legacy)
 Coffee + (Similar With Caffeine Tile)
-MiCTS + (Trigger CTS)
-
-Note for CTS: 
-- Hypothetically Works When Done Updating Google App & Google Assistant
-- To Check: When home button long press, gemini will shows up
 
 /system/system/app/ 
 [No Changes]
