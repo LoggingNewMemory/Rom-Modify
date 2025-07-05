@@ -23,3 +23,10 @@ Music # (Replaced With Accord Legacy)
 
 system/system/build.prop
 persist.sys.axion_maintainer=Kanagawa Yamada
+
+/system/product/etc/build.prop
+Yamada Patch 1.0
+ro.product.product.model=TECNO La+ Darkness
+
+/system/system/system_ext/etc/build.prop
+ro.product.system_ext.model=TECNO La+ Darkness
