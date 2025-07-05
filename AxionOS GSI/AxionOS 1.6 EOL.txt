@@ -17,3 +17,9 @@ AudioFX x
 system/system/priv-app/
 TrebleApp x
 
+system/system/product/app/
+Camera2 # (Replaced With Aperture)
+Music # (Replaced With Accord Legacy)
+
+system/system/build.prop
+persist.sys.axion_maintainer=Kanagawa Yamada
