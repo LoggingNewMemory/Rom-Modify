@@ -4,7 +4,7 @@ Base Vendor: HiOS 14 Ver 824
 By: Kanagawa Yamada
 GSI Source: https://github.com/Doze-off/axion_aosp/
 SELinux Context Patch: OFF
-ROM Status: Under Development
+ROM Status: Canceled (Not Pass: SMS App)
 
 Key:
 [REMOVE] = x
