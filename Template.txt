@@ -10,3 +10,9 @@ Key:
 [REMOVE] = x
 [Add] = +
 [Modify] = #
+
+/system/system/build.prop
+
+/system/system/product/etc/build.prop
+
+/system/system/system_ext/etc/build.prop

@@ -1,0 +1,25 @@
+[ROM Name]
+Target Device: TECNO LH8n
+Base Vendor: HiOS 14 Ver 824
+By: Kanagawa Yamada
+GSI Source: https://github.com/Doze-off/EvoX_treble/releases/tag/2025-07-06
+SELinux Context Patch: OFF
+ROM Status:     
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+/system/system/priv-app/
+MusicFX x
+TrebleApp x
+
+system/system/product/app/
+Chrome # Replace with Via Browser
+
+/system/system/build.prop
+
+/system/system/product/etc/build.prop
+
+/system/system/system_ext/etc/build.prop
