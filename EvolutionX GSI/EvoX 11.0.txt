@@ -4,7 +4,7 @@ Base Vendor: HiOS 14 Ver 824
 By: Kanagawa Yamada
 GSI Source: https://github.com/Doze-off/EvoX_treble/releases/tag/2025-07-06
 SELinux Context Patch: OFF
-ROM Status:     
+ROM Status: CANCELED (SMS Won't work without treble app)
 
 Key:
 [REMOVE] = x
@@ -16,7 +16,8 @@ MusicFX x
 TrebleApp x
 
 system/system/product/app/
-Chrome # Replace with Via Browser
+Chrome x
+Chrome-stub x
 Camera2 x
 
 /system/system/build.prop
