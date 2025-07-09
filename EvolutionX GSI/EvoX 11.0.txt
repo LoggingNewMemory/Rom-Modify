@@ -17,6 +17,7 @@ TrebleApp x
 
 system/system/product/app/
 Chrome # Replace with Via Browser
+Camera2 x
 
 /system/system/build.prop
 
