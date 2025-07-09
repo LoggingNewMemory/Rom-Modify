@@ -21,5 +21,8 @@ Chrome # Replace with Via Browser
 /system/system/build.prop
 
 /system/system/product/etc/build.prop
+ro.product.product.model=TECNO La+ Darkness
+Yamada Patch
 
 /system/system/system_ext/etc/build.prop
+ro.product.system_ext.model=TECNO La+ Darkness
