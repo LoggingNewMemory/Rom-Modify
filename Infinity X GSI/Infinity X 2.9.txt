@@ -19,9 +19,6 @@ TrebleApp x
 Camera2 # Replaced with Accord Legacy (ik it's weird but there's already built in aperture)
 Chrome64 # Replaced With Via Browser
 
-/system/system/product/priv-app/
-SettingsIntelligence # Attempt to fix search on settings (Thanks: Doze-off)
-
 /system/system/product/etc/build.prop
 ro.product.product.model=TECNO La+ Darkness
 Yamada Patch 1.0
@@ -31,8 +28,3 @@ ro.product.system_ext.model=TECNO La+ Darkness
 
 /system/system/build.prop
 ro.infinity.maintainer=Kanagawa Yamada
-ro.product.marketname=TECNO La+ Darkness
-ro.infinity.soc=Mediatek Dimensity 6080
-ro.infinity.battery=5000 mAh
-ro.infinity.display=1080 x 2460, 120 Hz
-ro.infinity.camera=50MP + 16MP + 0.8MP
