@@ -13,7 +13,6 @@ Key:
 
 /system/system/priv-app/
 MusicFX x
-TrebleApp x
 
 /system/system/product/app/
 Camera2 # Replaced with Accord Legacy (ik it's weird but there's already built in aperture)
