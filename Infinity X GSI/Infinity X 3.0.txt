@@ -23,7 +23,7 @@ TrebleApp x
 ro.infinity.soc=Mediatek Dimensity 6080
 ro.infinity.battery=5000 mAh
 ro.infinity.display=1080 x 2460, 120Hz
-ro.infinity.camera=50MP + 16MP = 0.2MP
+ro.infinity.camera=50MP + 16MP + 0.2MP
 ro.product.marketname=TECNO La+ Darkness
 
 ro.product.product.model=TECNO La+ Darkness
