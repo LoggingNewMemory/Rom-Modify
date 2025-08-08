@@ -1,0 +1,18 @@
+[ROM Name]
+Target Device: 
+Base Vendor: 
+By: Kanagawa Yamada
+GSI Source: 
+SELinux Context Patch:
+ROM Status:
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+/system/system/build.prop
+
+/system/system/product/etc/build.prop
+
+/system/system/system_ext/etc/build.prop

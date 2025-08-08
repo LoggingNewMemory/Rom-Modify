@@ -1,0 +1,126 @@
+HiOSPro V2 Source
+Target Device: Tecno Pova 5 Pro (LH8n)
+Base ROM: HiOS 14 Ver 824 
+By: Kanagawa Yamada
+SELinux Context Patch: ON
+ROM Status: RELEASED (Unofficial Gaming ROM for LH8n)
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+Plan:
+- Base taken from HiOS 14 v824 [DONE]
+- Take Pova 7 Bootanim [DONE]
+- Wallpaper & lockscreen [DONE]
+- Sounds [DONE]
+- Partial Yamada Patch [DONE]
+- Modify & Add Theme [DONE]
+- La+ System Setting Banner [DONE] 
+
+/product/etc/build.prop
+- Yamada Patch 1.0
+- ro.tran_low_battery_60hz_refresh_rate.support=0
+- ro.product.tran.version.release=HiOSPro-2.0-KanagawaYamada-BV824
+- ro.build.display.id=HiOSPro-2.0-KanagawaYamada-BV824
+
+/product/theme/wallpaper
+Wallpaper Pova 7 & Pova 6 #
+Free Fire Wallpaper x
+Pova 5 Wallpaper x
+Exclusive HiOSPro 2.0 Wallpaper +
+Exclusive La+ Darkness Wallpaper +
+
+/product/theme/charge
+Replace Pova 5 Pro Charging Animation to Pova 7 Pro
+
+/product/media/audio
+Replace UI Sounds with Pova 7 # 
+
+/product/media
+bootanimation.zip # (Change to Pova 7 Bootanim (I like it frfr))
+shutdownanim.zip # (Change to Pova 7 Shutdown anim)
+
+/product/overlay
+hios-trans-overlay.apk + (Change Setting Header Image)
+
+/system/system/etc/sysconfig/
+(Google Photos Unlimited Backup) 
+pixel_2017_exclusive.xml +
+pixel_2018_exclusive.xml +
+pixel_2019_exclusive.xml +
+
+/product/etc/sysconfig/
+(Google Photos Unlimited Backup)
+pixel_2016_exclusive.xml +
+pixel_2017_exclusive.xml +
+pixel_2018_exclusive.xml +
+pixel_2019_exclusive.xml +
+pixel_experience_2017.xml +
+pixel_experience_2018.xml +
+pixel_experience_2019.xml +
+pixel_experience_2019_midyear.xml +
+pixel_experience_2020.xml +
+pixel_experience_2020_midyear.xml +
+pixel_experience_2021.xml +
+pixel_experience_2021_midyear.xml +
+pixel_experience_2022.xml +
+pixel_experience_2022_midyear.xml +
+pixelify_experience.xml +
+
+/product/app
+TSPOT x
+VishaPlayer x
+XShare x
+YouTube x
+YTMusic x
+Chrome x
+ChromeAssistant x
+CalendarGoogle x
+HolaBrowser x
+Meet x
+
+/product/operator/app
+AHAGames x
+Boomplay x
+Drive x
+EtalaseApps x
+FacebookStub x
+Shopee x
+ShopeeID x
+ShopeeTH x
+Snapchat x
+TikTok x
+TikTokLite x
+TikTokzhiliao x
+Videos x
+Welife x
+WPSOffice x
+
+/product/priv-app
+Carlcare x
+PalmStore x
+FilesGoogle x
+Via + (Via Browser)
+Accord + (Accord Legacy)
+Coffee + (Similar With Caffeine Tile)
+
+/system/system/app/ 
+[No Changes]
+
+/system/system/priv-app/
+[No Changes]
+
+/system_ext/app
+Ella x
+MagazineService x
+AIVoiceAssistant_v3.9 x
+AIVoiceSettings x
+MasterOfLanguage x
+TranssionFMRadio x
+LetsSwitch x
+FM_FunBase x
+
+/system_ext/priv-app
+[No Changes]

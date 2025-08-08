@@ -1,0 +1,24 @@
+WitAqua 3.0
+Target Device: Tecno Pova 5 Pro (LH8n)
+Base Vendor: HiOS 14 Ver 824 
+By: Kanagawa Yamada
+GSI Source: https://github.com/Doze-off/WitAqua_treble
+SELinux Context Patch: OFF
+ROM Status: Canceled (CTS is Missing)
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+/system/system_ext/priv-app/
+AudioFX x
+
+/system/product/app/
+Camera2 x
+Jelly # Replaced With Via Browser
+LatinIME # Replaced With LatinIMEGooglePrebuilt
+Twelve # Replaced With Accord Legacy
+
+/system/product/etc/build.prop
+ro.os_circle_to_search=1

@@ -1,0 +1,30 @@
+[ROM Name]
+Target Device: TECNO LH8n
+Base Vendor: HiOS 14 Ver 824
+By: Kanagawa Yamada
+GSI Source: https://github.com/Doze-off/EvoX_treble/releases/tag/2025-07-06
+SELinux Context Patch: OFF
+ROM Status: CANCELED (SMS Won't work without treble app)
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+/system/system/priv-app/
+MusicFX x
+TrebleApp x
+
+system/system/product/app/
+Chrome x
+Chrome-stub x
+Camera2 x
+
+/system/system/build.prop
+
+/system/system/product/etc/build.prop
+ro.product.product.model=TECNO La+ Darkness
+Yamada Patch
+
+/system/system/system_ext/etc/build.prop
+ro.product.system_ext.model=TECNO La+ Darkness

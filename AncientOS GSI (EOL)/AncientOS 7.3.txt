@@ -1,0 +1,32 @@
+[ROM Name]
+Target Device: TECNO LH8n
+Base Vendor: HiOS 14 Ver 824
+By: Kanagawa Yamada
+GSI Source: https://www.pling.com/p/1766574/
+SELinux Context Patch: OFF
+ROM Status: UNOFFICIAL BUILD 
+
+Key:
+[REMOVE] = x
+[Add] = +
+[Modify] = #
+
+system/system/priv-app/
+MusicFX x
+TrebleApp x
+
+system/system/product/app/
+Chrome # Replace with Via Browser
+Gmail2 # Replace with Accord Legacy
+
+system/system/build.prop
+
+/system/system/product/etc/build.prop
+ro.product.product.model=TECNO La+ Darkness
+Yamada Patch 1.0
+
+/system/system/system_dlkm/etc/build.prop
+ro.product.system_dlkm.model=TECNO La+ Darkness
+
+/system/system/system_ext/etc/build.prop
+ro.product.system_ext.model=TECNO La+ Darkness
