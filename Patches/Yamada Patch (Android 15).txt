@@ -6,6 +6,9 @@
 # Please Credit or You Get a Bone Cancer #
 ##########################################
 
+# Note: This is device specific (LH8n | Tecno Pova 5 Pro Patches)
+# Do not imediatelly copy all of this patch, review it first
+
 #perf+
 debug.sf.enable_gl_backpressure=1
 debug.sf.disable_backpressure=0
