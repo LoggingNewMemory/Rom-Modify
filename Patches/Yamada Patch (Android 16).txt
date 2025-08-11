@@ -24,38 +24,6 @@ persist.audio.volume_steps=30
 persist.audio.max_volume=100
 
 #######################################
-# Attempt to fix Graphics Flickering 
-# On Unreal Engine (Maybe Unstable)
-#######################################
-
-#######################################
-# Note: Powered by: ChatGPT | Doesn't works
-#######################################
-
-# Force OpenGL ES instead of Vulkan
-debug.hwui.renderer=opengl
-persist.sys.gfx.backend=opengl
-persist.sys.hwui.use_vulkan=false
-debug.hwui.use_vulkan=false
-
-# Triple Buffering & Layer Tweaks
-debug.hwui.disable_scissor_opt=true
-debug.hwui.disable_vsync=false
-persist.sys.sf.disable_triple_buffering=false
-persist.sys.sf.enable_triple_buffering=true
-debug.hwui.layer_cache_size=64
-
-# SurfaceFlinger Tweaks
-debug.sf.latch_unsignaled=1
-debug.sf.disable_client_composition_cache=1
-persist.sys.sf.native_mode=0
-debug.sf.use_phase_offsets_as_durations=1
-
-# Mediatek GPU Composition
-debug.hwcomposer.force_gpu=1
-vendor.debug.hwui.force_gpu=1
-
-#######################################
 # EnCorinVest prop
 #######################################
 PERF_RES_NET_BT_AUDIO_LOW_LATENCY=1
