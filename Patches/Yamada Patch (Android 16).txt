@@ -25,7 +25,7 @@ persist.audio.max_volume=100
 #######################################
 
 #######################################
-# Note: Powered by: ChatGPT
+# Note: Powered by: ChatGPT | Doesn't works
 #######################################
 
 # Force OpenGL ES instead of Vulkan
@@ -50,7 +50,6 @@ debug.sf.use_phase_offsets_as_durations=1
 # Mediatek GPU Composition
 debug.hwcomposer.force_gpu=1
 vendor.debug.hwui.force_gpu=1
-
 
 #######################################
 # EnCorinVest prop
