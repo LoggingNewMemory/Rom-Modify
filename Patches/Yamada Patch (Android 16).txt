@@ -12,6 +12,10 @@
 # Fix Brightness
 ro.vendor.transsion.backlight_hal.optimization=1
 
+# Minor Graphics Tweaks
+persist.sys.phh.touch_hint=rotate
+debug.renderengine.backend=skiaglthreaded
+
 # Fix low volume
 persist.audio.voip.vol=100
 ro.config.media_vol_steps=30
