@@ -269,6 +269,34 @@ else
 fi
 echo "--------------------------------------------------"
 
+# --- LH8n Fix Brightness and Volume ---
+if prompt_user "Include LH8n Fix Brightness and Volume fix?"; then
+    BUILD_PROP="BreezeOS/system/product/etc/build.prop"
+    echo "    -> Applying LH8n Fixes to $BUILD_PROP..."
+
+    if [ -f "$BUILD_PROP" ]; then
+        cat << 'EOF' >> "$BUILD_PROP"
+
+# --- LH8n Fixes ---
+# Fix Brightness
+ro.vendor.transsion.backlight_hal.optimization=1
+
+# Fix low volume
+persist.audio.voip.vol=100
+ro.config.media_vol_steps=30
+ro.config.vc_call_vol_steps=30
+persist.audio.volume_steps=30
+persist.audio.max_volume=100
+EOF
+        echo "    -> LH8n Fixes applied successfully."
+    else
+        echo "    -> WARNING: File not found: $BUILD_PROP"
+    fi
+else
+    echo "    -> Skipping LH8n Fixes."
+fi
+echo "--------------------------------------------------"
+
 # --- Cleanup ---
 echo "==> Cleaning up temporary files..."
 rm -rf TMP
