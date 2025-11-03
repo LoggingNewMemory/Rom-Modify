@@ -53,28 +53,59 @@ else
 fi
 echo "--------------------------------------------------"
 
-# --- Replace Chrome with Via Browser ---
-if prompt_user "Replace Chrome with Via Browser?"; then
+# --- Add Via Browser ---
+if prompt_user "Add Via Browser?"; then
     VIA_URL="https://github.com/LoggingNewMemory/Rom-Modify/releases/download/AddOn/Via.Browser.apk"
-    TARGET_CHROME_APK="system/system/product/app/Chrome64/Chrome64.apk"
-    TEMP_VIA_APK="TMP/Chrome64.apk"
+    TARGET_VIA_DIR="system/system/product/app/ViaBrowser"
+    TARGET_VIA_APK="$TARGET_VIA_DIR/ViaBrowser.apk"
+
+    echo "    -> Creating directory $TARGET_VIA_DIR..."
+    mkdir -p "$TARGET_VIA_DIR"
 
     echo "    -> Downloading Via Browser..."
     # Use wget with -q (quiet) and --show-progress for a clean output
-    if wget -q --show-progress -O "$TEMP_VIA_APK" "$VIA_URL"; then
+    if wget -q --show-progress -O "$TARGET_VIA_APK" "$VIA_URL"; then
         echo "    -> Download successful."
-        echo "    -> Replacing Chrome64.apk..."
-        if [ -f "$TARGET_CHROME_APK" ]; then
-            mv -f "$TEMP_VIA_APK" "$TARGET_CHROME_APK"
-            echo "    -> Chrome replaced with Via Browser."
-        else
-            echo "    -> WARNING: Target file not found: $TARGET_CHROME_APK"
-        fi
+        echo "    -> Via Browser added to $TARGET_VIA_APK"
     else
         echo "    -> ERROR: Failed to download Via Browser. Skipping."
+        rm -rf "$TARGET_VIA_DIR" # Clean up empty directory
     fi
 else
-    echo "    -> Skipping Chrome replacement."
+    echo "    -> Skipping Via Browser."
+fi
+echo "--------------------------------------------------"
+
+# --- Add Aperture ---
+if prompt_user "Add Aperture?"; then
+    APERTURE_URL="https://github.com/LoggingNewMemory/Rom-Modify/releases/download/AddOn/Aperture.apk"
+    TARGET_APERTURE_DIR="system/system/product/priv-app/Aperture"
+    TARGET_APERTURE_APK="$TARGET_APERTURE_DIR/Aperture.apk"
+    BUILD_PROP="system/system/product/etc/build.prop"
+
+    echo "    -> Creating directory $TARGET_APERTURE_DIR..."
+    mkdir -p "$TARGET_APERTURE_DIR"
+
+    echo "    -> Downloading Aperture..."
+    if wget -q --show-progress -O "$TARGET_APERTURE_APK" "$APERTURE_URL"; then
+        echo "    -> Download successful."
+        echo "    -> Applying Aperture config to $BUILD_PROP..."
+        
+        if [ -f "$BUILD_PROP" ]; then
+            # Add a newline for separation and a comment
+            echo "" >> "$BUILD_PROP"
+            echo "# --- Aperture Camera Config ---" >> "$BUILD_PROP"
+            echo "ro.com.google.lens.oem_camera_package=org.lineageos.aperture.dev" >> "$BUILD_PROP"
+            echo "    -> Aperture config applied."
+        else
+            echo "    -> WARNING: $BUILD_PROP not found. APK was downloaded but config was NOT applied."
+        fi
+    else
+        echo "    -> ERROR: Failed to download Aperture. Skipping."
+        rm -rf "$TARGET_APERTURE_DIR" # Clean up
+    fi
+else
+    echo "    -> Skipping Aperture."
 fi
 echo "--------------------------------------------------"
 
@@ -228,6 +259,51 @@ EOF
     fi
 else
     echo "    -> Skipping LH8n Fixes."
+fi
+echo "--------------------------------------------------"
+
+# --- System Wide BT HAL ---
+if prompt_user "Use System Wide BT HAL?"; then
+    BUILD_PROP="system/system/product/etc/build.prop"
+    echo "    -> Enabling System Wide BT HAL in $BUILD_PROP..."
+    if [ -f "$BUILD_PROP" ]; then
+        echo "" >> "$BUILD_PROP"
+        echo "# --- System Wide BT HAL ---" >> "$BUILD_PROP"
+        echo "persist.bluetooth.system_audio_hal.enabled=true" >> "$BUILD_PROP"
+        echo "    -> System Wide BT HAL enabled."
+    else
+        echo "    -> WARNING: File not found: $BUILD_PROP"
+    fi
+else
+    echo "    -> Skipping System Wide BT HAL."
+fi
+echo "--------------------------------------------------"
+
+# --- Spoof to Locked device ---
+if prompt_user "Spoof to Locked device?"; then
+    BUILD_PROP="system/system/product/etc/build.prop"
+    echo "    -> Applying Locked Device Spoof to $BUILD_PROP..."
+
+    if [ -f "$BUILD_PROP" ]; then
+        cat << 'EOF' >> "$BUILD_PROP"
+
+# --- Spoof to Locked device ---
+ro.control_privapp_permissions=log
+ro.boot.flash.locked=1
+ro.boot.verifiedbootstate=green
+ro.boot.veritymode=enforcing
+ro.boot.vbmeta.device_state=locked
+vendor.boot.vbmeta.device_state=locked
+ro.build.type=user
+ro.debuggable=0
+ro.secure=1
+EOF
+        echo "    -> Locked Device Spoof applied successfully."
+    else
+        echo "    -> WARNING: File not found: $BUILD_PROP"
+    fi
+else
+    echo "    -> Skipping Locked Device Spoof."
 fi
 echo "--------------------------------------------------"
 
