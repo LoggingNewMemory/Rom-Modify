@@ -307,6 +307,41 @@ else
 fi
 echo "--------------------------------------------------"
 
+# --- Disable Voice Call in Route ---
+if prompt_user "Disable Voice Call in Route (May Fix Calls Audio)?"; then
+    BUILD_PROP="system/system/product/etc/build.prop"
+    echo "    -> Disabling Voice Call in Route in $BUILD_PROP..."
+    if [ -f "$BUILD_PROP" ]; then
+        echo "" >> "$BUILD_PROP"
+        echo "# --- Disable Voice Call in Route (Fix Calls Audio) ---" >> "$BUILD_PROP"
+        echo "persist.sys.phh.disable_voice_call_in=true" >> "$BUILD_PROP"
+        echo "    -> Voice Call in Route disabled."
+    else
+        echo "    -> WARNING: File not found: $BUILD_PROP"
+    fi
+else
+    echo "    -> Skipping Voice Call in Route."
+fi
+echo "--------------------------------------------------"
+
+# --- Disable SF GL/HWC backpressure ---
+if prompt_user "Disable SF GL/HWC backpressure (Might Improve Render Perf)?"; then
+    BUILD_PROP="system/system/product/etc/build.prop"
+    echo "    -> Disabling SF backpressure in $BUILD_PROP..."
+    if [ -f "$BUILD_PROP" ]; then
+        echo "" >> "$BUILD_PROP"
+        echo "# --- Disable SF GL/HWC backpressure (Render Perf) ---" >> "$BUILD_PROP"
+        echo "persist.sys.phh.enable_sf_gl_backpressure=0" >> "$BUILD_GuestPROP"
+        echo "persist.sys.phh.enable_sf_hwc_backpressure=0" >> "$BUILD_PROP"
+        echo "    -> SF backpressure disabled."
+    else
+        echo "    -> WARNING: File not found: $BUILD_PROP"
+    fi
+else
+    echo "    -> Skipping SF backpressure."
+fi
+echo "--------------------------------------------------"
+
 # --- Cleanup ---
 echo "==> Cleaning up temporary files..."
 rm -rf TMP
