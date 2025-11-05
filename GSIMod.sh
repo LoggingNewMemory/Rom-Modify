@@ -342,23 +342,6 @@ else
 fi
 echo "--------------------------------------------------"
 
-# --- Enable ANGLE (Android 15 / 16) ---
-if prompt_user "Enable ANGLE (Android 15 / 16)?"; then
-    BUILD_PROP="system/system/product/etc/build.prop"
-    echo "    -> Enabling ANGLE in $BUILD_PROP..."
-    if [ -f "$BUILD_PROP" ]; then
-        echo "" >> "$BUILD_PROP"
-        echo "# --- Enable ANGLE (Android 15 / 16) ---" >> "$BUILD_PROP"
-        echo "debug.graphics.angle.developeroption.enable=true" >> "$BUILD_PROP"
-        echo "    -> ANGLE enabled."
-    else
-        echo "    -> WARNING: File not found: $BUILD_PROP"
-    fi
-else
-    echo "    -> Skipping ANGLE."
-fi
-echo "--------------------------------------------------"
-
 # --- Cleanup ---
 echo "==> Cleaning up temporary files..."
 rm -rf TMP
