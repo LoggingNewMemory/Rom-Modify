@@ -331,7 +331,7 @@ if prompt_user "Disable SF GL/HWC backpressure (Might Improve Render Perf)?"; th
     if [ -f "$BUILD_PROP" ]; then
         echo "" >> "$BUILD_PROP"
         echo "# --- Disable SF GL/HWC backpressure (Render Perf) ---" >> "$BUILD_PROP"
-        echo "persist.sys.phh.enable_sf_gl_backpressure=0" >> "$BUILD_GuestPROP"
+        echo "persist.sys.phh.enable_sf_gl_backpressure=0" >> "$BUILD_PROP"
         echo "persist.sys.phh.enable_sf_hwc_backpressure=0" >> "$BUILD_PROP"
         echo "    -> SF backpressure disabled."
     else
@@ -339,6 +339,23 @@ if prompt_user "Disable SF GL/HWC backpressure (Might Improve Render Perf)?"; th
     fi
 else
     echo "    -> Skipping SF backpressure."
+fi
+echo "--------------------------------------------------"
+
+# --- Enable ANGLE (Android 15 / 16) ---
+if prompt_user "Enable ANGLE (Android 15 / 16)?"; then
+    BUILD_PROP="system/system/product/etc/build.prop"
+    echo "    -> Enabling ANGLE in $BUILD_PROP..."
+    if [ -f "$BUILD_PROP" ]; then
+        echo "" >> "$BUILD_PROP"
+        echo "# --- Enable ANGLE (Android 15 / 16) ---" >> "$BUILD_PROP"
+        echo "debug.graphics.angle.developeroption.enable=true" >> "$BUILD_PROP"
+        echo "    -> ANGLE enabled."
+    else
+        echo "    -> WARNING: File not found: $BUILD_PROP"
+    fi
+else
+    echo "    -> Skipping ANGLE."
 fi
 echo "--------------------------------------------------"
 
