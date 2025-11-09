@@ -163,15 +163,15 @@ else
 fi
 echo "--------------------------------------------------"
 
-# --- LH8n Fix Brightness and Volume ---
-if prompt_user "Include LH8n Fix Brightness and Volume fix?"; then
+# --- Transsion Fix Brightness and Volume ---
+if prompt_user "Include Transsion Fix Brightness and Volume fix?"; then
     BUILD_PROP="system/system/product/etc/build.prop"
-    echo "    -> Applying LH8n Fixes to $BUILD_PROP..."
+    echo "    -> Applying Transsion Fixes to $BUILD_PROP..."
 
     if [ -f "$BUILD_PROP" ]; then
         cat << 'EOF' >> "$BUILD_PROP"
 
-# --- LH8n Fixes ---
+# --- Transsion Fixes ---
 # Fix Brightness
 ro.vendor.transsion.backlight_hal.optimization=1
 
@@ -182,12 +182,12 @@ ro.config.vc_call_vol_steps=30
 persist.audio.volume_steps=30
 persist.audio.max_volume=100
 EOF
-        echo "    -> LH8n Fixes applied successfully."
+        echo "    -> Transsion Fixes applied successfully."
     else
         echo "    -> WARNING: File not found: $BUILD_PROP"
     fi
 else
-    echo "    -> Skipping LH8n Fixes."
+    echo "    -> Skipping Transsion Fixes."
 fi
 echo "--------------------------------------------------"
 
