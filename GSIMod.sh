@@ -110,7 +110,7 @@ fi
 echo "--------------------------------------------------"
 
 # --- Yamada Patch ---
-if prompt_user "Add Yamada Patch? (May Increase Performance and Extend Battery usage)"; then
+if prompt_user "Add Yamada Patch? (May Increase Performance)"; then
     BUILD_PROP="system/system/product/etc/build.prop"
     echo "    -> Applying Yamada Patch to $BUILD_PROP..."
 
