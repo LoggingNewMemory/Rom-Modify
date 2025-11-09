@@ -136,7 +136,6 @@ sys.surfaceflinger.idle_reduce_framerate_enable=no
 
 # Disable Limit 60FPS while Gaming on AOSP 15.0
 debug.graphics.game_default_frame_rate.disable=true
-
 EOF
         echo "    -> Yamada Patch applied successfully."
     else
