@@ -53,59 +53,100 @@ else
 fi
 echo "--------------------------------------------------"
 
-# --- Add Via Browser ---
-if prompt_user "Add Via Browser?"; then
-    VIA_URL="https://github.com/LoggingNewMemory/Rom-Modify/releases/download/AddOn/Via.Browser.apk"
-    TARGET_VIA_DIR="system/system/product/app/ViaBrowser"
-    TARGET_VIA_APK="$TARGET_VIA_DIR/ViaBrowser.apk"
-
-    echo "    -> Creating directory $TARGET_VIA_DIR..."
-    mkdir -p "$TARGET_VIA_DIR"
-
-    echo "    -> Downloading Via Browser..."
-    # Use wget with -q (quiet) and --show-progress for a clean output
-    if wget -q --show-progress -O "$TARGET_VIA_APK" "$VIA_URL"; then
-        echo "    -> Download successful."
-        echo "    -> Via Browser added to $TARGET_VIA_APK"
+# --- Jelly Removal ---
+JELLY_PATH="system/system/product/app/Jelly"
+if [ -d "$JELLY_PATH" ]; then
+    if prompt_user "Remove Jelly? (LineageOS Browser)"; then
+        echo "    -> Deleting Jelly..."
+        rm -rf "$JELLY_PATH/"
+        echo "    -> Jelly deleted successfully."
     else
-        echo "    -> ERROR: Failed to download Via Browser. Skipping."
-        rm -rf "$TARGET_VIA_DIR" # Clean up empty directory
+        echo "    -> Skipping Jelly deletion."
     fi
+fi
+echo "--------------------------------------------------"
+
+# --- Twelve Removal ---
+TWELVE_PATH="system/system/product/app/Twelve"
+if [ -d "$TWELVE_PATH" ]; then
+    if prompt_user "Remove Twelve? (LineageOS Music Player)"; then
+        echo "    -> Deleting Twelve..."
+        rm -rf "$TWELVE_PATH/"
+        echo "    -> Twelve deleted successfully."
+    else
+        echo "    -> Skipping Twelve deletion."
+    fi
+fi
+echo "--------------------------------------------------"
+
+# --- Add Via Browser ---
+# Define paths first for the check
+VIA_URL="https://github.com/LoggingNewMemory/Rom-Modify/releases/download/AddOn/Via.Browser.apk"
+TARGET_VIA_DIR="system/system/product/app/ViaBrowser"
+TARGET_VIA_APK="$TARGET_VIA_DIR/ViaBrowser.apk"
+
+# Check if it already exists *before* prompting
+if [ -d "$TARGET_VIA_DIR" ]; then
+    echo "    -> Via Browser already detected. Skipping."
 else
-    echo "    -> Skipping Via Browser."
+    if prompt_user "Add Via Browser?"; then
+        echo "    -> Creating directory $TARGET_VIA_DIR..."
+        mkdir -p "$TARGET_VIA_DIR"
+
+        echo "    -> Downloading Via Browser..."
+        # Use wget with -q (quiet) and --show-progress for a clean output
+        if wget -q --show-progress -O "$TARGET_VIA_APK" "$VIA_URL"; then
+            echo "    -> Download successful."
+            echo "    -> Via Browser added to $TARGET_VIA_APK"
+        else
+            echo "    -> ERROR: Failed to download Via Browser. Skipping."
+            rm -rf "$TARGET_VIA_DIR" # Clean up empty directory
+        fi
+    else
+        echo "    -> Skipping Via Browser."
+    fi
 fi
 echo "--------------------------------------------------"
 
 # --- Add Aperture ---
-if prompt_user "Add Aperture?"; then
-    APERTURE_URL="https://github.com/LoggingNewMemory/Rom-Modify/releases/download/AddOn/Aperture.apk"
-    TARGET_APERTURE_DIR="system/system/product/priv-app/Aperture"
-    TARGET_APERTURE_APK="$TARGET_APERTURE_DIR/Aperture.apk"
-    BUILD_PROP="system/system/product/etc/build.prop"
+# Define paths first for the check
+APERTURE_URL="https://github.com/LoggingNewMemory/Rom-Modify/releases/download/AddOn/Aperture.apk"
+TARGET_APERTURE_DIR="system/system/product/priv-app/Aperture"
+TARGET_APERTURE_APK="$TARGET_APERTURE_DIR/Aperture.apk"
+BUILD_PROP="system/system/product/etc/build.prop"
+# Add check for both app and priv-app paths
+CHECK_APERTURE_APP_PATH="system/system/product/app/Aperture"
+CHECK_APERTURE_PRIV_APP_PATH="system/system/product/priv-app/Aperture"
 
-    echo "    -> Creating directory $TARGET_APERTURE_DIR..."
-    mkdir -p "$TARGET_APERTURE_DIR"
+# Check if it already exists *before* prompting
+if [ -d "$CHECK_APERTURE_APP_PATH" ] || [ -d "$CHECK_APERTURE_PRIV_APP_PATH" ]; then
+    echo "    -> Aperture already detected. Skipping."
+else
+    if prompt_user "Add Aperture?"; then
+        echo "    -> Creating directory $TARGET_APERTURE_DIR..."
+        mkdir -p "$TARGET_APERTURE_DIR"
 
-    echo "    -> Downloading Aperture..."
-    if wget -q --show-progress -O "$TARGET_APERTURE_APK" "$APERTURE_URL"; then
-        echo "    -> Download successful."
-        echo "    -> Applying Aperture config to $BUILD_PROP..."
-        
-        if [ -f "$BUILD_PROP" ]; then
-            # Add a newline for separation and a comment
-            echo "" >> "$BUILD_PROP"
-            echo "# --- Aperture Camera Config ---" >> "$BUILD_PROP"
-            echo "ro.com.google.lens.oem_camera_package=org.lineageos.aperture.dev" >> "$BUILD_PROP"
-            echo "    -> Aperture config applied."
+        echo "    -> Downloading Aperture..."
+        if wget -q --show-progress -O "$TARGET_APERTURE_APK" "$APERTURE_URL"; then
+            echo "    -> Download successful."
+            echo "    -> Applying Aperture config to $BUILD_PROP..."
+            
+            if [ -f "$BUILD_PROP" ]; then
+                # Add a newline for separation and a comment
+                echo "" >> "$BUILD_PROP"
+                echo "# --- Aperture Camera Config ---" >> "$BUILD_PROP"
+                echo "ro.com.google.lens.oem_camera_package=org.lineageos.aperture.dev" >> "$BUILD_PROP"
+                echo "    -> Aperture config applied."
+            else
+                echo "    -> WARNING: $BUILD_PROP not found. APK was downloaded but config was NOT applied."
+            fi
         else
-            echo "    -> WARNING: $BUILD_PROP not found. APK was downloaded but config was NOT applied."
+            echo "    -> ERROR: Failed to download Aperture. Skipping."
+            rm -rf "$TARGET_APERTURE_DIR" # Clean up
         fi
     else
-        echo "    -> ERROR: Failed to download Aperture. Skipping."
-        rm -rf "$TARGET_APERTURE_DIR" # Clean up
+        echo "    -> Skipping Aperture."
     fi
-else
-    echo "    -> Skipping Aperture."
 fi
 echo "--------------------------------------------------"
 
