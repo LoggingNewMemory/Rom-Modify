@@ -213,14 +213,10 @@ if prompt_user "Include Transsion Fix Brightness and Volume fix?"; then
 
 # --- Transsion Fixes ---
 # Fix Brightness
+persist.sys.tran.brightness.gammalinear.convert=1
 ro.vendor.transsion.backlight_hal.optimization=1
-
-# Fix low volume
-persist.audio.voip.vol=100
-ro.config.media_vol_steps=30
-ro.config.vc_call_vol_steps=30
-persist.audio.volume_steps=30
-persist.audio.max_volume=100
+ro.transsion.backlight.level=-1
+ro.transsion.physical.backlight.optimization=1
 EOF
         echo "    -> Transsion Fixes applied successfully."
     else
