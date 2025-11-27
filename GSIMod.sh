@@ -204,7 +204,7 @@ fi
 echo "--------------------------------------------------"
 
 # --- Transsion Fix Brightness and Volume ---
-if prompt_user "Include Transsion Fix Brightness and Volume fix?"; then
+if prompt_user "Include Transsion Fix Brightness fix?"; then
     BUILD_PROP="system/system/product/etc/build.prop"
     echo "    -> Applying Transsion Fixes to $BUILD_PROP..."
 
